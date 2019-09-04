@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from 'redux';
 
-import database from './reducers/DatabaseReducer';
+import firebase from './reducers/FirebaseReducer';
 
-export default createStore(combineReducers({ database }));
+export default createStore(combineReducers({ firebase }));
