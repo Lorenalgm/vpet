@@ -1,47 +1,50 @@
 import Styled from 'styled-components/native';
 
-// LOGIN
-export const LoginMainContainer = Styled.KeyboardAvoidingView`
+export const Container = Styled.KeyboardAvoidingView`
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 100%;
+padding-top: 40px;
+padding-bottom: 20px;
+`;
+
+export const ContentContainer = Styled.View`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 100%;
-    color: #fafafa;
+    width: 100%;
 `;
 
-export const LoginPositionContainer = Styled.View`
-    width: 100%; 
-    display: flex; 
-    alignItems: center;
-    padding-top: 100px;
+export const SubmitContainer = Styled.View`
+    padding-top: 20px;
+    width: 80%;
 `;
 
-export const LoginField = Styled.TextInput`
+export const GoogleSubmitContainer = Styled.View`
+    padding-top: 20px;
+    width: 40%;
+`;
+
+export const Submit = Styled.Button`
+    padding: 30px;
+`;
+
+export const Field = Styled.TextInput`
+    opacity: .75;
     background-color: #fff;
     padding: 10px;
     width: 80%;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: ${props => props.gap ? '20px' : '0'};
 `;
 
-export const LoginSubmit = Styled.Button`
-    padding: 30px;
+export const CustomText = Styled.Text`
+    color: ${props => !props.theme ? '#828282' : '#fafafa'};
+    margin-top: ${props => props.margin ? '20px' : '0'};
+    margin-bottom: ${props => props.margin ? '20px' : '0'};
 `;
 
-export const LoginText = Styled.Text`
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #fafafa;
+export const LogoText = Styled(CustomText)`
+    font-size: 60;
 `;
-
-// BASE
-export const BaseMainContainer = Styled.KeyboardAvoidingView`
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100%;
-`;
-
-// SIGNUP
-// PASSWORDRECOVER
